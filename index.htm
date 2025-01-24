@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,50 +13,105 @@
     <title>Club de voyage</title>
 </head>
 <body>
-    <header>
-        <div class="entete global">
-            <figure class="entete__logo">
-                <img src="images/logo-blanc.png" alt="Logo" class="logo">
-            </figure>
-            <div class="entete__text-box">
-                <h1 class="entete__titre">
-                    <span class="entete__titre-main">Dehors</span>
-                    <span class="entete__titre-sub">là où la vie s’épanouit</span>
-                </h1>
-
-                <a href="#" class="btn btn-blanc btn-animated">Découvrez nos destinations</a>
-
-            </div>
-
-            <div class="entete__navigation">
-                <nav class="entete__menu">
-                    <li class="menu__item"><a href="" class="menu__item__a">Accueil</a></li>
-                    <li class="menu__item"><a href="" class="menu__item__a">Aventure</a></li>
-                    <li class="menu__item"><a href="" class="menu__item__a">Zen</a></li>
-                    <li class="menu__item"><a href="" class="menu__item__a">Culturel</a></li>
-                    <li class="menu__item"><a href="" class="menu__item__a">Sport</a></li>
-                </nav>
-                <form  class="entete__recherche">
-                    <input type="text" class="recherche__input">
-                    <img src="" alt="" class="recherche__img">
-                </form>
-            </div>
+    <header class="entete global">
+        <figure class="entete__logo">
+            <img src="images/logo-blanc.png" alt="Logo" class="logo">
+        </figure>
+        <div class="entete__text-box">
+            <h1 class="entete__titre">
+                <span class="entete__titre-main">Dehors</span>
+                <span class="entete__titre-sub">là où la vie s’épanouit</span>
+            </h1>
+        </div>
+        <div class="entete__navigation">
+            <nav class="entete__menu">
+                <ul class="menu__liste"> 
+                    <li class="menu__item"><a href="#" class="menu__item__link">Accueil</a></li>
+                    <li class="menu__item"><a href="#" class="menu__item__link">Aventure</a></li>
+                    <li class="menu__item"><a href="#" class="menu__item__link">Zen</a></li>
+                    <li class="menu__item"><a href="#" class="menu__item__link">Culturel</a></li>
+                    <li class="menu__item"><a href="#" class="menu__item__link">Sport</a></li>
+                </ul>
+            </nav>
+            <form class="entete__recherche">
+                <input type="text" class="recherche__input" placeholder="Rechercher...">
+                <button type="submit" class="recherche__btn">
+                    <img src="assets/img/search-icon.png" alt="Icône de recherche" class="recherche__img">
+                </button>
+            </form>
         </div>
     </header>
-    <section class="hero">
-        <div class="hero__contenu">
-            <h1 class="hero__titre"></h1>
-            <p class="hero__description"></p>
-            <p class="hero__courriel"></p>
-            <p class="hero__adresse"></p>
-            <section class="hero__sociaux">
 
-            </section>
-
-        </div>
-    </section>
-    <main></main>
-    <footer></footer>
     
+
+    <main id="contenu-principal">
+        <header class="entete-principal">
+            
+            <h1 class="entete-principal__titre">Bienvenue au Club de Voyages</h1>
+        </header>
+        <section class="liens-rapides">
+            <h2 class="liens-rapides__titre">Liens rapides</h2>
+            <ul class="liens-rapides__liste">
+                <li class="liens-rapides__item"><h3><a href="#" class="liens-rapides__link">Réserver un voyage</a></h3></li>
+                <li class="liens-rapides__item"><h3><a href="#" class="liens-rapides__link">Consulter nos destinations</a></h3></li>
+                <li class="liens-rapides__item"><h3><a href="#" class="liens-rapides__link">Offres de dernière minute</a></h3></li>
+                <li class="liens-rapides__item"><h3><a href="#" class="liens-rapides__link">Conseils de voyage</a></h3></li>
+                <li class="liens-rapides__item"><h3><a href="#" class="liens-rapides__link">Assistance client</a></h3></li>
+            </ul>
+        </section>
+
+        <article class="annonce-vedette">
+            <img src="assets/img/offre-speciale.jpg" alt="Offre spéciale" class="annonce-vedette__image">
+            <h2 class="annonce-vedette__titre">Offre en vedette</h2>
+            <p class="annonce-vedette__description">Profitez de nos offres spéciales pour des vacances inoubliables!</p>
+            <a href="#" class="annonce-vedette__link">Découvrez nos offres</a>
+        </article>
+
+        <section class="nouvelles">
+            <h2 class="nouvelles__titre">Dernières nouvelles du Club de Voyages</h2>
+            <div class="nouvelles__grille">
+                <article class="carte">
+                    <header class="carte__header">
+                        <img src="assets/img/destination1.jpg" alt="Destination 1" class="carte__image">
+                        <h3 class="carte__titre">Destination #1</h3>
+                    </header>
+                    <p class="carte__description">Découvrez les merveilles de notre première destination.</p>
+                    <a href="#" class="carte__link">En savoir plus</a>
+                </article>
+                <article class="carte">
+                    <header class="carte__header">
+                        <img src="assets/img/destination2.jpg" alt="Destination 2" class="carte__image">
+                        <h3 class="carte__titre">Destination #2</h3>
+                    </header>
+                    <p class="carte__description">Explorez les paysages époustouflants de notre deuxième destination.</p>
+                    <a href="#" class="carte__link">En savoir plus</a>
+                </article>
+                <article class="carte">
+                    <header class="carte__header">
+                        <img src="assets/img/destination3.jpg" alt="Destination 3" class="carte__image">
+                        <h3 class="carte__titre">Destination #3</h3>
+                    </header>
+                    <p class="carte__description">Venez découvrir la culture unique de notre troisième destination.</p>
+                    <a href="#" class="carte__link">En savoir plus</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pied-de-page">
+        <nav class="pied-de-page__navigation">
+            <h2 class="pied-de-page__titre">Informations supplémentaires</h2>
+            <ul class="pied-de-page__liste">
+                <li class="pied-de-page__item"><a href="#" class="pied-de-page__link">Conditions générales</a></li>
+                <li class="pied-de-page__item"><a href="#" class="pied-de-page__link">Politique de confidentialité</a></li>
+                <li class="pied-de-page__item"><a href="#" class="pied-de-page__link">Contactez-nous</a></li>
+                <li class="pied-de-page__item"><a href="#" class="pied-de-page__link">FAQ</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="pied-de-page__logo">
+            <img width="200" src="images/logo.png" alt="Logo" class="pied-de-page__logo-image">
+            <span class="pied-de-page__copyright">© Mon Club de Voyages, 2025</span>
+        </a>
+    </footer>
 </body>
 </html>

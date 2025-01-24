@@ -2,10 +2,9 @@
 /*
 Theme Name:  Patricia Bravo
 Theme URI: https://referenced.ca
-Author: Eddy Martin
+Author: Patricia Bravo
 Author URI: https://github.com/patrihow
-Description:D
-éveloppement d'un de base dans le cadre du cours 33W
+Description: Développement d'un de base dans le cadre du cours 33W
 Version: 1.0
 Requires at least: 6.0
 Tested up to: 6.5
@@ -16,36 +15,39 @@ Text Domain: patricia-bravo
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
 /*  ////////////////////////////////
 Les variables
 //////////////////////////////////// */
+
 /*  ////////////////////////////////
 Les bases
 //////////////////////////////////// */
-/*  Les balises de base */
 
+/*  Les balises de base */
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  
 }
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  /*font-size: 16px;*/
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-
   box-sizing: border-box;
 }
 
+/*  ////////////////////////////////
+Typographie
+//////////////////////////////////// */
 h1 {
   font-size: clamp(1rem, 2.5vw, 5rem);
 }
@@ -58,38 +60,32 @@ h3 {
   font-size: clamp(0.9rem, 2.5vw, 3rem);
 }
 
-h4 {
-  font-size: clamp(0.8rem, 2.5vw, 1.5rem);
-}
-
-h5 {
-  font-size: clamp(0.8rem, 2.5vw, 1.2rem);
-}
-
-h6 {
-  font-size: clamp(0.8rem, 2.5vw, 1.1rem);
-}
-
 p {
   font-size: clamp(0.8rem, 2.5vw, 1.1rem);
 }
 
+/*  ////////////////////////////////
+Liens
+//////////////////////////////////// */
 a {
   text-decoration: none;
   color: rgb(28, 172, 28);
 }
+
 a:hover {
   color: rgb(11, 97, 11);
 }
+
 a:visited {
   color: rgb(106, 226, 106);
 }
 
 /*  ////////////////////////////////
-Les composants
+Entête
 //////////////////////////////////// */
 .entete {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   position: relative;
   height: 95vh;
@@ -98,48 +94,53 @@ Les composants
     rgba(15, 183, 119, 0.912)), 
     url("images/hero.jpg");
   background-size: cover;
-  background-position: top;
+  background-position: center;
 }
+
 .entete__logo {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
+
 .logo {
   height: 3.5rem;
 }
+
 .entete__titre {
   color: #fff;
   text-transform: uppercase;
-
   backface-visibility: hidden;
-  margin-bottom: 6rem;
-
+  margin-bottom: 60px;
 }
 .entete__titre-main {
   display: block;
-  font-size: 6rem;
+  font-size: 60px;
   font-weight: 400;
-  letter-spacing: 3.5rem;
+  letter-spacing: 35px;
 
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-  /*
-  animation-delay: 3s;
-  */
 }
 .entete__titre-sub {
   display: block;
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: 700;
-  letter-spacing: 1.5rem;
+  letter-spacing: 15px;
   animation: moveInRight 1s ease-out;
-  
 }
+
 .entete__navigation {
-  display: inline-block;
+  padding: 2rem; 
+  display: flex; 
+  align-items: center; 
+  position: sticky; 
+  top: 0; 
+  z-index: 10; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .entete__text-box {
   position: absolute;
   text-align: center;
@@ -148,20 +149,17 @@ Les composants
   transform: translate(-50%, -50%);
 }
 
-/* Section hero */
-.hero {
-
-}/*# sourceMappingURL=style.css.map */
+/* Animation titres Hero */
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem);
+    transform: translateX(-100px);
 
   }
 
   80% {
-    transform: translateX(1rem);
+    transform: translateX(10px);
 
   }
 
@@ -175,12 +173,12 @@ Les composants
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem);
+    transform: translateX(100px);
 
   }
 
   80% {
-    transform: translateX(-1rem);
+    transform: translateX(-10px);
 
   }
 
@@ -194,7 +192,7 @@ Les composants
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(3rem);
+    transform: translateY(30px);
 
   }
 
@@ -205,8 +203,112 @@ Les composants
   }
 }
 
-.btn:link,
-.btn:visited {
+/*  ////////////////////////////////
+Nav
+//////////////////////////////////// */
+
+.entete__navigation>a:hover,
+.entete__navigation a[href]:hover {
+	color: var(--accent);
+}
+
+.entete__navigation {
+	padding: 2rem;
+	display: flex;
+	align-items: baseline;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background-color: white;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.entete__menu {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.menu__item {
+  margin: 0 0.5rem;
+}
+.menu__item__link {
+  text-decoration: none;
+}
+
+.entete__navigation input {
+	width: 100%;
+	max-width: var(--dimension-tinier);
+	border: var(--border-slimmest) solid var(--darkering);
+}
+
+.entete__navigation>ul {
+	flex-grow: 1;
+	display: inline-flex;
+	margin-left: auto;
+}
+
+.entete__navigation>ul>li {
+	position: relative;
+}
+.entete__navigation li:hover>a {
+	color: var(--accent);
+}
+
+.entete__navigation>ul>li>span {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	padding: var(--spacing-nano);
+}
+
+.entete__navigation>ul>li>ul {
+	min-width: var(--dimension-tiniest);
+	padding-top: var(--spacing-thinnest);
+	font-size: var(--font-shortest);
+	font-weight: 600;
+	position: absolute;
+	background-color: white;
+	top: 100%;
+	left: calc(-1 * var(--spacing-thinner)/2);
+	padding: var(--spacing-thinner);
+	border-bottom-right-radius: var(--radius-dull);
+	border-bottom-left-radius: var(--radius-dull);
+	transition-duration: 0ms;
+	box-shadow: 0px 4px 4px var(--tertiary);
+}
+.entete__navigation>ul>li:not(:hover),
+.entete__navigation>ul>li:not(:hover)>ul {
+	transition-delay: var(--duration-slow);
+}
+.entete__navigation>ul>li:hover,
+.entete__navigation>ul>li:hover>ul {
+	transition-delay: 0ms;
+}
+.entete__navigation>ul>li:not(:hover)>ul {
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(-100%);
+}
+.entete__navigation>ul>li>ul a {
+	transition-delay: 0ms;
+}
+
+.entete__navigation>ul>li:not(:hover) a {
+	transition-delay: var(--duration-medium);
+}
+
+.entete__navigation>ul ul>li+li {
+	margin-top: var(--spacing-thinnest);
+}
+
+.entete__navigation>ul>li+li {
+	margin-left: var(--spacing-thin);
+}
+
+
+/*  ////////////////////////////////
+Boutons
+//////////////////////////////////// */
+.btn {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -215,15 +317,6 @@ Les composants
   transition: all .2s;
   position: relative;
   font-size: 1.6rem;
-} 
-
-.btn:hover {
-  transform: translateY(-3rem);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
-}
-.btn:active {
-  transform: translateY(-1rem);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
 }
 
 .btn-blanc {
@@ -231,27 +324,100 @@ Les composants
   color: #777;
 }
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .4s;
-}
-.btn-blanc::after {
-  background-color: #fff;
-}
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
+.btn:hover {
+  transform: translateY(-3rem);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
 }
 
 .btn-animated {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards;
+}
+
+/*  ////////////////////////////////
+Nouvelles
+//////////////////////////////////// */
+.nouvelles {
+  margin: var(--spacing-thin) 0;
+}
+
+.nouvelles__titre {
+  margin-bottom: var(--spacing-thin);
+}
+
+.nouvelles__grille {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-thin);
+}
+
+/*  ////////////////////////////////
+Carte
+//////////////////////////////////// */
+.carte {
+  background-color: var(--primary);
+  color: white;
+  border-radius: var(--radius-sharp);
+  padding: var(--spacing-thin);
+  flex: 1 1 calc(33.333% - var(--spacing-thin));
+}
+
+.carte__header {
+  margin-bottom: var(--spacing-thin);
+}
+
+.carte__image {
+  width: 100%;
+  border-radius: var(--radius-sharp);
+}
+
+.carte__titre {
+  margin: var(--spacing-thin) 0;
+}
+
+/*  ////////////////////////////////
+Pied de page
+//////////////////////////////////// */
+.pied-de-page {
+  background-color: var(--tertiary);
+  display: flex;
+  padding: var(--spacing-thin);
+  align-items: center;
+}
+
+.pied-de-page__navigation {
+  flex-grow: 1;
+}
+
+.pied-de-page__titre {
+  margin-bottom: var(--spacing-thin);
+}
+
+.pied-de-page__liste {
+  display: flex;
+  flex-direction: column;
+}
+
+.pied-de-page__item {
+  margin-bottom: var(--spacing-nano);
+}
+
+.pied-de-page__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pied-de-page__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+}
+
+.pied-de-page__logo-image {
+  width: 200px;
+}
+
+.pied-de-page__copyright {
+  margin-top: var(--spacing-nano);
 }
