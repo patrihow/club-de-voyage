@@ -189,19 +189,7 @@ Entête
   }
 }
 
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
 
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-
-  }
-}
 
 /*  ////////////////////////////////
 Nav
@@ -219,19 +207,35 @@ Nav
 	position: sticky;
 	top: 0;
 	z-index: 10;
+  list-style: none;
 	background-color: white;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .entete__menu {
   display: flex;
   justify-content: space-around;
+  font-size: 1.5rem;
+}
+.menu__liste {
+  display: flex;
+  gap: 4rem;
+  flex-direction: row;
   list-style: none;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
 }
-.menu__item {
-  margin: 0 0.5rem;
+.menu__liste>ul {
+  flex-grow: 1;
+	display: inline-flex;
+	margin-left: auto;
 }
-.menu__item__link {
-  text-decoration: none;
+.menu__liste>ul>li {
+  position: relative;
+}
+.menu__item__link li:hover>a {
+  color: aquamarine;
 }
 
 .entete__navigation input {
@@ -240,41 +244,6 @@ Nav
 	border: var(--border-slimmest) solid var(--darkering);
 }
 
-.entete__navigation>ul {
-	flex-grow: 1;
-	display: inline-flex;
-	margin-left: auto;
-}
-
-.entete__navigation>ul>li {
-	position: relative;
-}
-.entete__navigation li:hover>a {
-	color: var(--accent);
-}
-
-.entete__navigation>ul>li>span {
-	position: relative;
-	z-index: 1;
-	display: inline-block;
-	padding: var(--spacing-nano);
-}
-
-.entete__navigation>ul>li>ul {
-	min-width: var(--dimension-tiniest);
-	padding-top: var(--spacing-thinnest);
-	font-size: var(--font-shortest);
-	font-weight: 600;
-	position: absolute;
-	background-color: white;
-	top: 100%;
-	left: calc(-1 * var(--spacing-thinner)/2);
-	padding: var(--spacing-thinner);
-	border-bottom-right-radius: var(--radius-dull);
-	border-bottom-left-radius: var(--radius-dull);
-	transition-duration: 0ms;
-	box-shadow: 0px 4px 4px var(--tertiary);
-}
 .entete__navigation>ul>li:not(:hover),
 .entete__navigation>ul>li:not(:hover)>ul {
 	transition-delay: var(--duration-slow);
@@ -291,19 +260,12 @@ Nav
 .entete__navigation>ul>li>ul a {
 	transition-delay: 0ms;
 }
-
-.entete__navigation>ul>li:not(:hover) a {
-	transition-delay: var(--duration-medium);
-}
-
 .entete__navigation>ul ul>li+li {
-	margin-top: var(--spacing-thinnest);
+	margin-top: 1rem;
 }
-
 .entete__navigation>ul>li+li {
-	margin-left: var(--spacing-thin);
+	margin-left: 1rem;
 }
-
 
 /*  ////////////////////////////////
 Boutons
