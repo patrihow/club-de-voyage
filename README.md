@@ -1,6 +1,6 @@
 # Club de voyage 🌍
 
-**Club de voyage** est un projet réalisé dans le cadre de la classe **Gestionnaire de contenu WordPress.
+**Club de voyage** est un projet réalisé dans le cadre de la classe Gestionnaire de contenu WordPress.
 
 ## 🚀 Fonctionnalités principales
 
