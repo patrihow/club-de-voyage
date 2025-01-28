@@ -17,7 +17,6 @@
 - **HTML5** : Structure sémantique et accessible.
 - **CSS3** : Design moderne et responsive.
 - **Sass** : Préprocesseur CSS pour une meilleure organisation et modularité des styles.
-- **Google Fonts** : Intégration de Roboto et Merriweather pour une typographie lisible et esthétique.
 - **Méthodologie BEM (Block, Element, Modifier)** : Normes de nommage utilisées pour un code CSS clair et maintenable.
 
 ---
