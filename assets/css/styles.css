@@ -402,15 +402,6 @@ _bannner.scss
   mix-blend-mode: multiply;
 }
 
-.banner a {
-  text-decoration: none;
-  background-color: #fff;
-  font-weight: 600;
-  padding: 1rem 2rem;
-  font-size: 1.3rem;
-  border-radius: 5px;
-}
-
 h2 {
   font-size: 3rem;
   color: #3E4929;
@@ -423,6 +414,21 @@ h2 {
 .banner a, p {
   font-family: var(--font-base);
   color: #282725;
+}
+
+.banner a {
+  text-decoration: none;
+  background-color: #fff;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.banner a:hover {
+  color: var(--accent);
 }
 
 /* ----------------------------------

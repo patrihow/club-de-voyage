@@ -1,0 +1,14 @@
+.banner a {
+    text-decoration: none;
+    background-color: #fff;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.banner a:hover {
+    color: var(--accent);
+}
